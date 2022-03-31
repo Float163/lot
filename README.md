@@ -1,15 +1,32 @@
-# Basic Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+# Simple Solididty contract
 
 Try running some of the following tasks:
 
+Local deploy
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+npx hardhat run tasks\deploy.js --network localhost
+```
+
+Rinkeby deploy
+```shell
+npx hardhat run tasks\deploy.js --network rinkeby
+```
+
+Add campaign
+```shell
+npx hardhat newcampaignn --account <who run> --contract <contract address>
+```
+View campaign
+```shell
+npx hardhat viewcampaignn --contract <contract address> --campaign <id campaign> --candidate <candidate address>
+```
+
+Close campaign
+```shell
+npx hardhat closecampaignn --contract <contract address> --campaign <id campaign>
+```
+
+Add candidate
+```shell
+npx hardhat addcandidate --contract <contract address> --campaign <id campaign> --candidate <candidate address>
 ```
